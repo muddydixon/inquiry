@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS inquiries;
+CREATE TABLE inquiries (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) DEFAULT "",
+  description VARCHAR(255) DEFAULT "",
+  is_private Boolean DEFAULT False,
+
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  deleted_at DATETIME DEFAULT NULL
+) Engine=InnoDB;
+
+DROP TABLE IF EXISTS items;
+CREATE TABLE items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  inquiry_id INT UNSIGNED NOT NULL,
+  order_id INT UNSIGNED NOT NULL,
+  name VARCHAR(255) DEFAULT "",
+  description VARCHAR(255) DEFAULT "",
+  type ENUM("text", "textarea", "checkbox", "radio"),
+  options VARCHAR(255) DEFAULT "",
+  is_required Boolean DEFAULT False,
+
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  deleted_at DATETIME DEFAULT NULL
+) Engine=InnoDB;
+
+DROP TABLE IF EXISTS answers;
+CREATE TABLE answers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  inquiry_id INT UNSIGNED NOT NULL,
+  item_id INT UNSIGNED NOT NULL,
+  session VARCHAR(255) NOT NULL,
+  json BLOB NOT NULL,
+
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  deleted_at DATETIME DEFAULT NULL,
+
+  unique session_inquiry_id (session, inquiry_id)
+) Engine=InnoDB;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  inquiry_id INT UNSIGNED NOT NULL,
+  session VARCHAR(255) NOT NULL,
+  name VARCHAR(255) DEFAULT "",
+
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  deleted_at DATETIME DEFAULT NULL
+) Engine=InnoDB;

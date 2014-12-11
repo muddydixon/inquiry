@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
+    <script src="/js/noreact.js"></script>
+  </head>
+  <body>
+    <div class="container" >
+      <div class="notifications hide">
+      </div>
+      <div class="row">
+        <h1>第1回 エンジニアミーティング 2014/12/10 アンケート</h1>
+      </div>
+      <div class="row">
+        <form role="form" method="POST" action="/api/inquiries/0">
+          <div class="form-group well">
+            <label for="item-1">お名前 (匿名可)</label>
+            <input type="text" class="form-control" id="item-1" name="item-1" />
+          </div>
+          <div class=" form-group well">
+            <label for="item-2">参加してよかったセッションを教えてください (複数回答可)</label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="item-2" value="開発環境を改善するには？" /> 開発環境を改善するには？
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="item-2" value="エンジニアのキャリアパスと評価" /> エンジニアのキャリアパスと評価
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="item-2" value="技術力を向上させるには？" /> 技術力を向上させるには？
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="item-2" value="なんで今のニフティってこんな状態なの？" /> なんで今のニフティってこんな状態なの？
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="item-2" value="懇親会" /> 懇親会
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <h2>議論として</h2>
+          </div>
+          <div class="form-group well">
+            <label for="item-3">よかったところを教えてください</label>
+            <textarea class="form-control" rows="3" name="item-3"></textarea>
+          </div>
+          <div class="form-group well">
+            <label for="item-4">悪かったところを教えてください</label>
+            <textarea class="form-control" rows="3" name="item-4"></textarea>
+          </div>
+          <div class="row">
+            <h2>運営として</h2>
+          </div>
+          <div class="form-group well">
+            <label for="item-5">よかったところを教えてください</label>
+            <textarea class="form-control" rows="3" name="item-5"></textarea>
+          </div>
+          <div class="form-group well">
+            <label for="item-6">悪かったところを教えてください</label>
+            <textarea class="form-control" rows="3" name="item-6"></textarea>
+          </div>
+          <div class="row">
+            <h2>その他</h2>
+          </div>
+          <div class="form-group well">
+            <label for="item-7" class="required">次回あったら参加しますか？</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="item-7" value="次回も参加したい" /> 次回も参加したい
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="item-7" value="次回は見送る" /> 次回は見送る
+              </label>
+            </div>
+          </div>
+          <div class="form-group well">
+            <label for="item-8" class="required">タスクフォースに参加して活動したいと思いませんか？</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="item-8" value="参加したい" /> 参加したい
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="item-8" value="応援はするが参加はしたくない" /> 応援はするが参加はしたくない
+              </label>
+            </div>
+          </div>
+          <div class="form-group well">
+            <label for="item-9">その他なにかコメントがあればお願いします</label>
+            <textarea class="form-control" rows="3" name="item-9"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

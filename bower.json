@@ -1,0 +1,19 @@
+{
+  "name": "inquiry",
+  "version": "0.0.0",
+  "authors": [
+    "muddydixon <muddydixon@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "font-awesome": "~4.2.0"
+  }
+}

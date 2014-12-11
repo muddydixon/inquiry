@@ -1,0 +1,24 @@
+.navbar {
+    background: #CCCCCC;
+}
+.required {
+}
+.required:after {
+    font-size: 8pt;
+    color: #DD5555;
+    margin-left: 10px;
+    content: "※ 回答必須"
+}
+
+.notifications {
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+}
+.notification {
+}
+
+.inquiry-toolbar {
+    position: fixed;
+    bottom: 0;
+}
